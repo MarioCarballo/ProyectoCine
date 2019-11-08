@@ -13,5 +13,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        browser=(WebView)findViewById(R.id.WebView);
+        browser.setWebChromeClient(new WebView ()){
+
+
+        });
     }
 }

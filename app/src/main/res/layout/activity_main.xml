@@ -16,6 +16,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <WebView
+
+        android:id="@+id/WebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="201dp"
