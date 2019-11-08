@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,9 +16,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         browser=(WebView)findViewById(R.id.WebView);
-        browser.setWebChromeClient(new WebView ()){
 
+        browser.setWebViewClient(new WebViewClient(){
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
 
         });
+        // Cargamos la WEB
+        browser.loadUrl("http://mjgl.com.sv/cine/");
     }
 }
