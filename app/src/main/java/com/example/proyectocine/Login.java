@@ -3,6 +3,7 @@ package com.example.proyectocine;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -17,5 +18,7 @@ public class Login extends AppCompatActivity {
         et_usuario=(EditText)findViewById((R.id.et_usuario));
         et_pass=(EditText)findViewById((R.id.et_pass));
         btnlog=(Button) findViewById((R.id.btnlog));
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }
