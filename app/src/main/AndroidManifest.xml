@@ -11,9 +11,12 @@
         android:roundIcon="@drawable/fondo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Principal"></activity>
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Principal" ></activity>
+        <activity android:name=".Login">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
