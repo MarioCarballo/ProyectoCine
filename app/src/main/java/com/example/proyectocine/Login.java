@@ -29,6 +29,14 @@ public class Login extends AppCompatActivity {
                 String usu = et_usuario.getText().toString();
                 String pass = et_pass.getText().toString();
 
+                if (usu.equals("Alumno")&& pass.equals("123")){
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
+                }else{
+                    et_usuario.setText(null);
+                    et_pass.setText(null);
+                    Toast.makeText(Login.this, "Usuario o contraseña incorrectas", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
