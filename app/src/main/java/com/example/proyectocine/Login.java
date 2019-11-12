@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
                 String usu = et_usuario.getText().toString();
                 String pass = et_pass.getText().toString();
 
-                if (usu.equals("Alumno")&& pass.equals("123")){
+                if (usu.equals("Admin")&& pass.equals("123")){
                     Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
                 }else{
