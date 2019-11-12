@@ -8,6 +8,8 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     WebView browser;
 
     @Override
@@ -28,5 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
         // Cargamos la WEB
         browser.loadUrl("http://mjgl.com.sv/cine/");
+
+
     }
 }
