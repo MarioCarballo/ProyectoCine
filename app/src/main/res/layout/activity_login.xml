@@ -43,7 +43,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Contraseña"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:paddingLeft="25dp" />
 
     <Button
