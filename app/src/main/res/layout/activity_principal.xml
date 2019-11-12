@@ -16,7 +16,7 @@
         android:layout_marginTop="255dp"
         android:background="@drawable/stylebuton"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#F1EDED"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         />
@@ -31,7 +31,7 @@
         android:background="@drawable/stylebuton"
         android:text="Ingresar como Cliente"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#FCF7F7"
 
         />
 
