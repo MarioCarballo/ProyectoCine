@@ -3,6 +3,7 @@ package com.example.proyectocine;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         browser=(WebView)findViewById(R.id.WebView);
+
+        WebSettings webSettings = browser.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
         browser.setWebViewClient(new WebViewClient(){
 
