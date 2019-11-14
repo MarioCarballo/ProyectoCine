@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="138dp"
         android:layout_marginTop="55dp"
-        app:srcCompat="@drawable/usu" />
+        app:srcCompat="@drawable/ic_llave" />
 
 
     <EditText
@@ -42,9 +42,25 @@
         android:drawableStart="@drawable/candado"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Contraseña"
+        android:hint="Ingresar nueva contraseña"
         android:inputType="textPassword"
         android:paddingLeft="25dp" />
+
+    <EditText
+        android:id="@+id/etpas2"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/styleet"
+        android:drawableStart="@drawable/candado"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Confirmar nueva contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="25dp" />
+
 
     <Button
         android:id="@+id/btnlog"
