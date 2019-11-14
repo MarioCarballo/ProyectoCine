@@ -17,18 +17,61 @@
 
 
     <EditText
-        android:id="@+id/et_usuario"
+        android:id="@+id/et_nombre"
         android:layout_width="match_parent"
         android:layout_height="73dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/styleet"
-        android:drawableStart="@drawable/usuario"
+        android:drawableStart="@drawable/ic_account_circle_black_24dp"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Ingrese el Nombre del Usuario"
+        android:hint="Ingresa tu nombre"
         android:inputType="textPersonName"
+        android:paddingLeft="25dp" />
+
+    <EditText
+        android:id="@+id/et_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/styleet"
+        android:drawableStart="@drawable/ic_account_circle_black_24dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Ingresa tus Apellidos"
+        android:inputType="textPersonName"
+        android:paddingLeft="25dp" />
+    <EditText
+        android:id="@+id/et_identificacion"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/styleet"
+        android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Ingresa tu Identificacion"
+        android:inputType="textPersonName"
+        android:paddingLeft="25dp" />
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/styleet"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Ingresa tu correo electronico"
+        android:inputType="textEmailAddress"
         android:paddingLeft="25dp" />
 
     <EditText
@@ -42,7 +85,7 @@
         android:drawableStart="@drawable/candado"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Ingresar nueva contraseña"
+        android:hint="Ingresa tu nueva contraseña"
         android:inputType="textPassword"
         android:paddingLeft="25dp" />
 
@@ -57,7 +100,7 @@
         android:drawableStart="@drawable/candado"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Confirmar nueva contraseña"
+        android:hint="Confirma tu nueva contraseña"
         android:inputType="textPassword"
         android:paddingLeft="25dp" />
 
