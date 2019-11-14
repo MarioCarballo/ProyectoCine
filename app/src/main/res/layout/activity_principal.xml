@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Principal"
     android:orientation="vertical"
-    android:background="@drawable/fondo">
+    android:background="@drawable/GB19U5qv_400x400">
 
     <Button
         android:id="@+id/btnusuario"
