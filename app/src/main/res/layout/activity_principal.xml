@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar como Usuario"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="245dp"
         android:background="@drawable/stylebuton"
         android:textAlignment="center"
         android:textColor="#F1EDED"
@@ -35,5 +35,30 @@
 
         />
 
+    <Button
+        android:id="@+id/btnregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/stylebuton"
+        android:text="Registrarse"
+        android:textAlignment="center"
+        android:textColor="#FCF7F7"
+
+        />
+    <Button
+        android:id="@+id/btnrecuoperar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="7dp"
+        android:background="@android:color/transparent"
+        android:text="¿Has Olvidado la contraseña?"
+        android:textColor="#FCF7F7"
+
+        />
 
 </LinearLayout>
