@@ -3,17 +3,29 @@ package com.example.proyectocine;
 import java.io.Serializable;
 
 public class Dto implements Serializable {
+
+    String nombre, apellido, correo, contra1, contra2;
+    int identificacion;
+
+
+    public Dto() {
+    }
+
+    public Dto(String nombre, String apellido, String correo, String contra1, String contra2, int identificacion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.contra1 = contra1;
+        this.contra2 = contra2;
+        this.identificacion = identificacion;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-public Dto(){
 
-}
 
-//public Dto(int identificacion, String nombre, apellido, correo, contra1, contra2 ){
-
-//}
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -59,6 +71,5 @@ public Dto(){
         this.identificacion = identificacion;
     }
 
-    String nombre, apellido, correo, contra1, contra2;
-int identificacion;
+
 }
