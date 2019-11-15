@@ -46,7 +46,7 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnregistro.setOnClickListener(new View.OnClickListener() {
+        btnrecuoperar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Principal.this, Login.class);
