@@ -46,5 +46,12 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnrecuoperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Principal.this, Login.class);
+                startActivity(intent);
+            }
+        });
     }
 }
