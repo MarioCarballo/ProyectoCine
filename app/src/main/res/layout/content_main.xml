@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior=""
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Registro de Empleados- "
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="#FDFDFD"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+        android:id="@+id/etcodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Ingrese el Codigo del Empleado"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/styleet"
+        android:paddingLeft="25dp"
+        android:drawableStart="@drawable/ic_key24dp"
+        android:drawablePadding="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        />
+
+            <EditText
+                android:id="@+id/etarticulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/styleet"
+                android:drawableStart="@drawable/ic_lpz"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Ingrese el Nombre del Empleado"
+                android:inputType="textPersonName"
+                android:paddingLeft="25dp" />
+
+            <EditText
+                android:id="@+id/etprecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/styleet"
+                android:drawableStart="@drawable/ic_money"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Ingrese el Sueldo del Empleados"
+                android:inputType="numberDecimal"
+                android:paddingLeft="25dp" />
+
+            <Button
+        android:id="@+id/btnguardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:background="@drawable/stylebuton"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:onClick="guardar"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/btncodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consulta por Codigo"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/stylebuton"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:onClick="consultaporcodigo"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/btndescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:text="Consulta por nombre"
+        android:background="@drawable/stylebuton"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="#0F0F0F"
+        android:onClick="consultapordescripcion"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+       />
+
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:text="Eliminar por Codigo"
+        android:background="@drawable/stylebuton"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:onClick="eliminarporcodigo"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+       />
+
+    <Button
+        android:id="@+id/btnModificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modificar"
+        android:background="@drawable/stylebuton"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:onClick="modificar"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="25dp"/>
+
+</LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+</LinearLayout>
