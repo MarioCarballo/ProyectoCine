@@ -8,13 +8,13 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main"
     android:orientation="vertical"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondo1">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Registro de Empleados- "
+        android:text="Registro "
         android:textAlignment="center"
         android:textSize="25dp"
         android:textColor="#FDFDFD"/>
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:hint="Ingrese el Codigo del Empleado"
+        android:hint="Ingrese su Identificacion:"
         android:layout_marginTop="15dp"
         android:background="@drawable/styleet"
         android:paddingLeft="25dp"
@@ -56,7 +56,7 @@
                 android:drawableStart="@drawable/ic_lpz"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Ingrese el Nombre del Empleado"
+                android:hint="Ingrese su correo electronico:"
                 android:inputType="textPersonName"
                 android:paddingLeft="25dp" />
 
