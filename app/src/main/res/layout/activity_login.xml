@@ -114,6 +114,22 @@
         android:paddingLeft="25dp" />
 
 
+            <Button
+                android:id="@+id/btnguardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/stylebuton"
+                android:textAlignment="center"
+                android:textColor="#FAF9F9"
+                android:textSize="18dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+
+                />
+
+
     <Button
         android:id="@+id/btnBuscar"
         android:layout_width="match_parent"
@@ -128,6 +144,7 @@
         android:layout_marginRight="100dp"
 
         />
+
             <Button
                 android:id="@+id/btnActualizar"
                 android:layout_width="match_parent"
