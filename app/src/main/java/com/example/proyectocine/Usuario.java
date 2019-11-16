@@ -4,6 +4,7 @@ public class Usuario {
     String nombre;
     String apellido;
     String email;
+    String identificacion;
     int clave;
 
     public Usuario() {

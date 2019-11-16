@@ -5,13 +5,10 @@ import java.io.Serializable;
 public class Dto implements Serializable {
 
     String nombre, apellido, correo, contra1, contra2;
-    int identificacion;
+    String identificacion;
 
 
-    public Dto() {
-    }
-
-    public Dto(String nombre, String apellido, String correo, String contra1, String contra2, int identificacion) {
+    public Dto(String nombre, String apellido, String correo, String contra1, String contra2, String identificacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -19,6 +16,18 @@ public class Dto implements Serializable {
         this.contra2 = contra2;
         this.identificacion = identificacion;
     }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+
+    public Dto() {
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -63,13 +72,8 @@ public class Dto implements Serializable {
         this.contra2 = contra2;
     }
 
-    public int getIdentificacion() {
-        return identificacion;
-    }
 
-    public void setIdentificacion(int identificacion) {
-        this.identificacion = identificacion;
-    }
+
 
 
 }

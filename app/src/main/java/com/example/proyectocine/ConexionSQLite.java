@@ -1,8 +1,10 @@
 package com.example.proyectocine;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -18,7 +20,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table usuarios (codigo integer not null primary key, nombre text, apellido tex,correo text, contraseña text)");
+        db.execSQL("create table usuarios (identificacion integer not null primary key, nombre text, apellido text,correo text, contrasena text)");
 
     }
 
@@ -31,5 +33,30 @@ public class ConexionSQLite extends SQLiteOpenHelper {
     public SQLiteDatabase bd() {
         SQLiteDatabase bd = this.getWritableDatabase();
         return bd;
+    }
+
+    public boolean consultaNombre(Dto datos) {
+        boolean estado = true;
+        int resultado;
+        SQLiteDatabase bd = this.getReadableDatabase();
+        try {
+            String Nombre = datos.getNombre();
+            Cursor fila = bd.rawQuery("select nombre, apellido, identificacion ,correo,contrasena from articulos where nombre='" + consultaNombre(datos) + "'", null);
+            if (fila.moveToFirst()) {
+                datos.setNombre(fila.getString(0));
+                datos.setApellido(fila.getString(1));
+                datos.setIdentificacion(fila.getString(2));
+                datos.setCorreo(fila.getString(2));
+                estado = true;
+            } else {
+                estado = false;
+            }
+            fila.close();
+
+        } catch (Exception e) {
+            estado = false;
+            Log.e("error.", e.toString());
+        }
+        return estado;
     }
 }
