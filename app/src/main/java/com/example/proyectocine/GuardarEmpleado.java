@@ -100,4 +100,9 @@ public class GuardarEmpleado extends AppCompatActivity {
         }
 
     }
-}}
+}
+    public void mensaje (String mensaje){
+        Toast.makeText(this, ""+mensaje, Toast.LENGTH_SHORT).show();
+    }
+
+}

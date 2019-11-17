@@ -94,4 +94,14 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         }
         return estado;
     }
+    public ArrayList<String> obtenerUsuarios () {
+        ArrayList<String> listaUsuarios = new ArrayList<String>();
+        final boolean add = listaUsuarios.add("Seleccione");
+
+        for (int i = 0; i < usuarioslist.size(); i++) {
+            listausuarios.add(usuarioslist.get(i).getNombre() + "~" + usuarioslist.get(i).getApellido() + "~" + usuarioslist.get(i).getIdentificacion()
+            + "~"+ usuarioslist.get(i).getCorreo()+"~"  + usuarioslist.get(i).getContra1());
+        }
+        return listaUsuarios;
+    }
 }
