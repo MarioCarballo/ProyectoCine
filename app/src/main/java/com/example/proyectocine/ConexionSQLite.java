@@ -44,7 +44,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         SQLiteDatabase bd = this.getReadableDatabase();
         try {
             String Nombre = datos.getNombre();
-            Cursor fila = bd.rawQuery("select nombre, apellido, identificacion ,correo,contrasena from articulos where nombre='" + consultaNombre(datos) + "'", null);
+            Cursor fila = bd.rawQuery("select nombre, apellido, identificacion ,correo,contrasena from usuarios where nombre='" + consultaNombre(datos) + "'", null);
             if (fila.moveToFirst()) {
                 datos.setNombre(fila.getString(0));
                 datos.setApellido(fila.getString(1));
@@ -59,6 +59,38 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         } catch (Exception e) {
             estado = false;
             Log.e("error.", e.toString());
+        }
+        return estado;
+    }
+    public boolean InsertarTradicional(Dto datos) {
+        boolean estado = true;
+        int resultado;
+
+        try {
+            String nombre = datos.getNombre();
+            String apellido = datos.getApellido();
+            String identificacion=datos.getIdentificacion();
+            String correo=datos.getCorreo();
+            String contrasena=datos.getContra1();
+
+
+            Cursor fila = bd().rawQuery("select identificacion from usuarios where identificacion='" + datos.getIdentificacion() + "'", null);
+            if (fila.moveToFirst() == true) {
+                estado = false;
+            } else {
+                String SQL = "INSERT INTO usuarios \n" +
+                        "(nombre,apellido,identificacion,correo,contrasena )\n" +
+                        "VALUES \n" +
+
+                        "('" + nombre + "', '" + apellido+ "', '" + identificacion + "','"+ correo +"','" + contrasena+ "');";
+
+                bd().execSQL(SQL);
+                bd().close();
+                estado = true;
+            }
+        } catch (Exception e) {
+            estado = false;
+            Log.e("error", e.toString());
         }
         return estado;
     }

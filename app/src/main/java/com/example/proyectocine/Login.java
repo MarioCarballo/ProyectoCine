@@ -48,64 +48,15 @@ public class Login extends AppCompatActivity {
 
 
     }
-
-    public void guardar(View v) {
-        if (et_nombre.getText().toString().length() == 0) {
-            estadoNombre = false;
-            et_nombre.setError("Campo Obligatorio");
-        } else {
-            estadoNombre = true;
-        }
-        if (et_apellido.getText().toString().length() == 0) {
-            estadoApellido = false;
-            et_apellido.setError("Campo Obligatorio");
-        } else {
-            estadoApellido = true;
-        }
-        if (et_identificacion.getText().toString().length() == 0) {
-            estadoIdentificacion = false;
-            et_identificacion.setError("Campo Obligatorio");
-        } else {
-            estadoIdentificacion = true;
-        }
-        if (et_email.getText().toString().length() == 0) {
-            estadoEmail = false;
-            et_email.setError("Campo Obligatorio");
-        } else {
-            estadoEmail = true;
-        }
-        if (et_pass.getText().toString().length() == 0) {
-            estadoClave = false;
-            et_pass.setError("Campo Obligatorio");
-        } else {
-            estadoClave = true;
-        }
-        if (et_pas2.getText().toString().length() == 0) {
-            estadoClave2 = false;
-            et_pas2.setError("Campo Obligatorio");
-        } else {
-            estadoClave2 = true;
-        }
-
-     //   if (estadoCodigo && estadoDescripcion && estadoPrecio) {
-       //     try {
-         //       datos.setCodigo(Integer.parseInt(etcodigo.getText().toString()));
-           //     datos.setDescripcion(etarticulo.getText().toString());
-             //   datos.setPrecio(Double.parseDouble(etprecio.getText().toString()));
-               /// if (conexion.InsertarTradicional(datos)){
-                  //  Toast.makeText(this, "registro agregado satisfactoriamente!", Toast.LENGTH_SHORT).show();
-                    //limpiarDatos();
-                //}else {
-                  //  Toast.makeText(MainActivity.this, "Error. Ya existe un registro\n"+ " Codigo: "
-                    //        +etcodigo.getText().toString(), Toast.LENGTH_SHORT).show();
-                    //limpiarDatos();
-                //}
-
-            //}catch (Exception e){
-              //  Toast.makeText(this, "Error. Ya existe.", Toast.LENGTH_SHORT).show();
-            //}
-        //}
+    public void limpiarDatos(){
+        et_email.setText(null);
+        et_identificacion.setText(null);
+        et_apellido.setText(null);
+        et_nombre.setText(null);
+        et_pass.setText(null);
+        et_pas2.setText(null);
     }
+
     public void consultaNombre(View v) {
         if (et_nombre.getText().toString().length()==0){
             et_nombre.setError("Campo obligatorio");
@@ -122,7 +73,7 @@ public class Login extends AppCompatActivity {
               et_email.setText(""+datos.getCorreo());
            }else {
               Toast.makeText(this,"No existe articulo con dicha descripción",Toast.LENGTH_SHORT).show();
-
+            limpiarDatos();
            }
         }else {
         Toast.makeText(this, "Ingrese la descripción del articulo",Toast.LENGTH_SHORT).show();
