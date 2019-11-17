@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
     boolean inputEp = false;
 
     ConexionSQLite conexion = new ConexionSQLite(this);
-    Usuario datos = new Usuario();
+    Dto datos = new Dto();
     AlertDialog.Builder dialogo;
 
     @Override
@@ -113,19 +113,20 @@ public class Login extends AppCompatActivity {
         }else {
             estadoNombre=true;
         }if (estadoNombre){
-            String descripcion=et_nombre .getText().toString();
-            datos.setNombre(descripcion);
-        //    if (conexion.consultaNombre(datos)){
-             //   etcodigo.setText(""+datos.getCodigo());
-               // etarticulo.setText(datos.getDescripcion());
-              //  etprecio.setText(""+datos.getPrecio());
-           // }else {
-               // Toast.makeText(this,"No existe articulo condivha descripcion",Toast.LENGTH_SHORT).show();
-              //  limpiarDatos();
-           // }
-        }//else {
-           // Toast.makeText(this, "Ingrese la descripcion del articulo",Toast.LENGTH_SHORT).show();
-       // }
+            String nombre=et_nombre .getText().toString();
+            datos.setNombre(nombre);
+          if (conexion.consultaNombre(datos)){
+               et_nombre.setText(""+datos.getNombre());
+                et_apellido.setText(datos.getApellido());
+               et_identificacion.setText(""+datos.getIdentificacion());
+              et_email.setText(""+datos.getCorreo());
+           }else {
+              Toast.makeText(this,"No existe articulo con dicha descripción",Toast.LENGTH_SHORT).show();
+
+           }
+        }else {
+        Toast.makeText(this, "Ingrese la descripción del articulo",Toast.LENGTH_SHORT).show();
+        }
 
     }
     }

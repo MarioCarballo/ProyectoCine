@@ -35,6 +35,9 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         return bd;
     }
 
+
+
+
     public boolean consultaNombre(Dto datos) {
         boolean estado = true;
         int resultado;
