@@ -53,5 +53,12 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnregistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Principal.this, GuardarEmpleado.class);
+                startActivity(intent);
+            }
+        });
     }
 }
