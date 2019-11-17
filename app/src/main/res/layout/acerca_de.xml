@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2D3FAC">
+    android:background="#009688">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -29,15 +29,64 @@
 
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/wil"
+                android:layout_width="390dp"
+                android:layout_height="128dp"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/wil" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wilfredo de Jesus Amaya Rivera"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/mario"
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
-                android:layout_marginTop="5dp"
-                app:srcCompat="@drawable/wil"/>
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/mario" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mario Antonio Carballo Díaz"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
 
+            <ImageView
+                android:id="@+id/frank"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/frank" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Franklin Adalberto Garcia Clara"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
 
+            <ImageView
+                android:id="@+id/sofi"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/sofia" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sofia Elizabeth Mendoza Galeano "
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
 
 
 
