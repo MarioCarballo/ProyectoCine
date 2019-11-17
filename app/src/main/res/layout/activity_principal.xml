@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Principal"
     android:orientation="vertical"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondo1">
 
     <ScrollView
         android:layout_width="wrap_content"
