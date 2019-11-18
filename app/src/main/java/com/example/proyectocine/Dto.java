@@ -17,13 +17,7 @@ public class Dto implements Serializable {
 
     }
 
-    public int getIdentificacion() {
-        return identificacion;
-    }
 
-    public void setIdentificacion(int identificacion) {
-        this.identificacion = identificacion;
-    }
 
     public Dto() {
     }
@@ -64,7 +58,13 @@ public class Dto implements Serializable {
         this.contra1 = contra1;
     }
 
+    public int getIdentificacion() {
+        return identificacion;
+    }
 
+    public void setIdentificacion(int identificacion) {
+        this.identificacion = identificacion;
+    }
 
 
 

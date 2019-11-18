@@ -14,6 +14,7 @@ public class Principal extends AppCompatActivity {
     Button btncliente;
     Button btnregistro;
     Button btnrecuoperar;
+    Button   btnacerca_de;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class Principal extends AppCompatActivity {
         btncliente=(Button) findViewById((R.id.btncliente));
         btnregistro=(Button) findViewById((R.id.btnregistro));
         btnrecuoperar=(Button) findViewById((R.id.btnrecuoperar));
-        btnusuario=(Button) findViewById((R.id.btnacerca_de));
+        btnacerca_de=(Button) findViewById((R.id.btnacerca_de));
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -61,7 +62,7 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnusuario.setOnClickListener(new View.OnClickListener() {
+        btnacerca_de.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Principal.this, acerca_de.class);

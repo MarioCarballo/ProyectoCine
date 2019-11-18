@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
     boolean estadoIdentificacion = false;
     boolean estadoEmail = false;
     boolean estadoClave = false;
-    boolean estadoClave2 = false;
+
     int estadoInsert = 0;
 
     boolean inputEn = false;
@@ -28,6 +28,7 @@ public class Login extends AppCompatActivity {
     boolean inputEI = false;
     boolean inputEE = false;
     boolean inputEC = false;
+
     ConexionSQLite conexion = new ConexionSQLite(this);
     Dto datos = new Dto();
     AlertDialog.Builder dialogo;
@@ -71,13 +72,14 @@ public class Login extends AppCompatActivity {
             datos.setIdentificacion(Integer.parseInt(identificacion));
 
             if (conexion.consultacodigo(datos) == true) {
-                et_nombre.setText(datos.getNombre());
-                et_apellido.setText(datos.getApellido());
-                et_identificacion.setText(" " + datos.getIdentificacion());
-                et_email.setText(datos.getCorreo());
+                et_nombre.setText(""+datos.getNombre());
+                et_apellido.setText(""+datos.getApellido());
+                et_identificacion.setText( ""+datos.getIdentificacion());
+                et_email.setText(""+datos.getCorreo());
+                et_pass.setText(""+datos.getContra1());
             } else {
                 Toast.makeText(this, "no existe tal usuario ", Toast.LENGTH_SHORT).show();
-                limpiarDatos();
+
 
             }
         }else{
