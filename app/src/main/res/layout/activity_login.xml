@@ -98,24 +98,6 @@
         android:inputType="textPassword"
         android:paddingLeft="25dp" />
 
-    <EditText
-        android:id="@+id/et_pas2"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/styleet"
-        android:drawableStart="@drawable/candado"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Confirma tu nueva contraseña"
-        android:inputType="textPassword"
-        android:paddingLeft="25dp" />
-
-
-
-
 
     <Button
         android:id="@+id/btnBuscar"
@@ -129,6 +111,7 @@
         android:textSize="18dp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
+        android:onClick="consultaNombre"
 
         />
 
@@ -144,7 +127,7 @@
                 android:textSize="18dp"
                 android:layout_marginLeft="100dp"
                 android:layout_marginRight="100dp"
-
+                android:onClick="modificar"
                 />
 
         </LinearLayout>

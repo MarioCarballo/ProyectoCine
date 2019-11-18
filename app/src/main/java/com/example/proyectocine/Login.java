@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     private Button btnBuscar, btnActualizar;
-    private EditText et_nombre, et_apellido, et_identificacion, et_email, et_pass, et_pas2;
+    private EditText et_nombre, et_apellido, et_identificacion, et_email, et_pass, ;
 
     boolean estadoNombre = false;
     boolean estadoApellido = false;
@@ -23,10 +23,11 @@ public class Login extends AppCompatActivity {
     boolean estadoClave2 = false;
     int estadoInsert = 0;
 
-    boolean inputEt = false;
-    boolean InputEd = false;
-    boolean inputEp = false;
-
+    boolean inputEn = false;
+    boolean InputEA = false;
+    boolean inputEI = false;
+    boolean inputEE = false;
+    boolean inputEC = false;
     ConexionSQLite conexion = new ConexionSQLite(this);
     Dto datos = new Dto();
     AlertDialog.Builder dialogo;
@@ -79,6 +80,52 @@ public class Login extends AppCompatActivity {
         Toast.makeText(this, "Ingrese la descripción del articulo",Toast.LENGTH_SHORT).show();
         }
 
+    }
+    public void modificar(View view) {
+       /* ConexionSQLite admin = new ConexionSQLite(this);
+        SQLiteDatabase bd =admin.getWritableDatabase();
+        String cod = etcodigo.getText().toString();
+        String descri = etarticulo.getText().toString();
+        String pre = etprecio.getText().toString();
+        ContentValues registro = new ContentValues();
+        registro.put("codigo" , cod);
+        registro.put("descripcion", descri);
+        registro.put("precio" , pre);
+        int cant = bd.update("articulos", registro, "codigo=" + cod,null );
+        bd.close();
+        if (cant == 1) {
+            Toast.makeText(this, "Se Modificaron Los Datos", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "No Existe Un Articulo Con El Codigo Ingresado", Toast.LENGTH_SHORT).show();
+        }
+    }*/
+        if (et_identificacion.getText().toString().length()==0){
+            et_identificacion.setError("campo obligatorio");
+            inputEI=false;
+        }else {
+            inputEI=true;
+        }
+        if (inputEI){
+
+
+            String nombre=et_nombre.getText().toString();
+            String apellido=et_apellido.getText().toString();
+            String identificacion=et_identificacion.getText().toString();
+            String correo=et_email.getText().toString();
+            String contra=et_pass.getText().toString();
+
+            datos.setNombre(nombre);
+            datos.setApellido(apellido);
+            datos.setIdentificacion(identificacion);
+            datos.setCorreo(correo);
+            datos.setContra1(contra);
+
+            if (conexion.modificar(datos)){
+                Toast.makeText(this,"Registro modificado",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this,"No se ha encontrado resultados de la busqueda",Toast.LENGTH_SHORT).show();
+            }
+        }
     }
     }
 
