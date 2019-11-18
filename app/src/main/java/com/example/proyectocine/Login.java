@@ -58,29 +58,45 @@ public class Login extends AppCompatActivity {
 
     }
 
-    public void consultaNombre(View v) {
-        if (et_nombre.getText().toString().length()==0){
-            et_nombre.setError("Campo obligatorio");
-            estadoNombre=false;
-        }else {
-            estadoNombre=true;
-        }if (estadoNombre){
-            String nombre=et_nombre .getText().toString();
-            datos.setNombre(nombre);
-          if (conexion.consultaNombre(datos)){
-               et_nombre.setText(""+datos.getNombre());
-                et_apellido.setText(datos.getApellido());
-               et_identificacion.setText(""+datos.getIdentificacion());
-              et_email.setText(""+datos.getCorreo());
-           }else {
-              Toast.makeText(this,"No existe Usuario con dicha descripción",Toast.LENGTH_SHORT).show();
-            limpiarDatos();
-           }
-        }else {
-        Toast.makeText(this, "Ingrese eol nombre del usuario",Toast.LENGTH_SHORT).show();
-        }
+    public void consultaporcodigo(View v) {
+       /* ConexionSQLite admin = new ConexionSQLite(this);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+                                                                                                                                 <<<<<<<<<<
+        String cod = etcodigo.getText().toString();
+        Cursor fila =bd.rawQuery("select descripcion,precio from articulos where codigo=" + cod, null);
 
+        if (fila.moveToFirst()){
+            etarticulo.setText(fila.getString(0));
+            etprecio.setText(fila.getString(1));
+        }else
+            Toast.makeText(this, "No Existe Este Articulo Con Dicho Codigo", Toast.LENGTH_SHORT).show();
+        bd.close();*/
+
+        if (et_identificacion.getText().toString().length() == 0) {
+            et_identificacion.setError("Campo Obligatorio");
+            inputEI = false;
+        } else {
+            inputEI = true;
+        }
+        if (inputEI) {
+            String identificacion = et_identificacion.getText().toString();
+            datos.setIdentificacion(Integer.parseInt(identificacion));
+
+            if (conexion.consultacodigo(datos) == true) {
+                et_nombre.setText(datos.getNombre());
+                et_apellido.setText(datos.getApellido());
+                et_identificacion.setText("" + datos.getIdentificacion());
+                et_email.setText(datos.getCorreo());
+            } else {
+                Toast.makeText(this, "no existe tal usuario ", Toast.LENGTH_SHORT).show();
+                limpiarDatos();
+
+            }
+        }else{
+            Toast.makeText(this, "ingrese el codigo a buscar", Toast.LENGTH_SHORT).show();
+        }
     }
+
     public void modificar(View view) {
        /* ConexionSQLite admin = new ConexionSQLite(this);
         SQLiteDatabase bd =admin.getWritableDatabase();
@@ -110,7 +126,7 @@ public class Login extends AppCompatActivity {
 
             String nombre=et_nombre.getText().toString();
             String apellido=et_apellido.getText().toString();
-            String identificacion=et_identificacion.getText().toString();
+            Integer identificacion= Integer.parseInt(et_identificacion.getText().toString());
             String correo=et_email.getText().toString();
             String contra=et_pass.getText().toString();
 

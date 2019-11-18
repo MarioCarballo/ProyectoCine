@@ -84,7 +84,7 @@ public class GuardarEmpleado extends AppCompatActivity {
              try {
                datos.setNombre(et_nombre.getText().toString());
              datos.setApellido(et_apellido.getText().toString());
-                 datos.setIdentificacion(et_identificacion.getText().toString());
+                 datos.setIdentificacion(Integer.parseInt(et_identificacion.getText().toString()));
                  datos.setCorreo(et_email.getText().toString());
                  datos.setContra1(et_pass.getText().toString());
          if (conexion.InsertarTradicional(datos)){

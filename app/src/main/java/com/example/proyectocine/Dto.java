@@ -4,24 +4,24 @@ import java.io.Serializable;
 
 public class Dto implements Serializable {
 
-    String nombre, apellido, correo, contra1, contra2;
-    String identificacion;
+    String nombre, apellido, correo, contra1;
+    int identificacion;
 
 
-    public Dto(String nombre, String apellido, String correo, String contra1, String contra2, String identificacion) {
+    public Dto(String nombre, String apellido, String correo, String contra1, int identificacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.contra1 = contra1;
-        this.contra2 = contra2;
-        this.identificacion = identificacion;
+        this.identificacion=identificacion;
+
     }
 
-    public String getIdentificacion() {
+    public int getIdentificacion() {
         return identificacion;
     }
 
-    public void setIdentificacion(String identificacion) {
+    public void setIdentificacion(int identificacion) {
         this.identificacion = identificacion;
     }
 
@@ -64,13 +64,6 @@ public class Dto implements Serializable {
         this.contra1 = contra1;
     }
 
-    public String getContra2() {
-        return contra2;
-    }
-
-    public void setContra2(String contra2) {
-        this.contra2 = contra2;
-    }
 
 
 

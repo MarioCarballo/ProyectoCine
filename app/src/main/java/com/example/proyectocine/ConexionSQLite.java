@@ -39,31 +39,31 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
 
 
-    public boolean consultaNombre(Dto datos) {
+    public boolean consultacodigo(Dto datos) {
         boolean estado = true;
         int resultado;
-        SQLiteDatabase bd = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         try {
-            String Nombre = datos.getNombre();
-            Cursor fila = bd.rawQuery("select nombre, apellido, identificacion ,correo,contrasena" +
-                    " from usuarios where nombre='" + consultaNombre(datos) + "'", null);
+            int identificacion = datos.getIdentificacion();
+            Cursor fila = db.rawQuery("select identificacion,nombre, apellido,correo  from usuario where identificacion=" + identificacion, null);
             if (fila.moveToFirst()) {
-                datos.setNombre(fila.getString(0));
-                datos.setApellido(fila.getString(1));
-                datos.setIdentificacion(fila.getString(2));
-                datos.setCorreo(fila.getString(2));
-                estado = true;
+                datos.setIdentificacion(Integer.parseInt(fila.getString(0)));
+                datos.setNombre(fila.getString(1));
+               datos.setApellido(fila.getString(2));
+               datos.setCorreo(fila.getString(3));
+
             } else {
                 estado = false;
-            }
-            fila.close();
 
+            }
+            db.close();
         } catch (Exception e) {
             estado = false;
             Log.e("error.", e.toString());
         }
         return estado;
     }
+
     public boolean InsertarTradicional(Dto datos) {
         boolean estado = true;
         int resultado;
@@ -71,7 +71,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         try {
             String nombre = datos.getNombre();
             String apellido = datos.getApellido();
-            String identificacion=datos.getIdentificacion();
+            int identificacion=datos.getIdentificacion();
             String correo=datos.getCorreo();
             String contrasena=datos.getContra1();
 
@@ -114,7 +114,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
             String nombre = datos.getNombre();
             String  apellido=datos.getApellido();
-            String identificacion=datos.getIdentificacion();
+            int identificacion=datos.getIdentificacion();
             String correo=datos.getCorreo();
             String contrasena=datos.getContra1();
 
