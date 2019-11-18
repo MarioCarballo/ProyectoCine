@@ -25,7 +25,10 @@ private final int DURACION_SPLASH =2000;
                 startActivity(intent);
                 finish();
             };
+
+
         }, DURACION_SPLASH);
+
 
     }
 }
