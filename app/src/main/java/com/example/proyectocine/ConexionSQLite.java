@@ -1,5 +1,6 @@
 package com.example.proyectocine;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -104,4 +105,36 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         }
         return listaUsuarios;
     }
+    public boolean modificar (Dto datos){
+        boolean estado = true;
+        int resultado;
+        SQLiteDatabase bd = this.getWritableDatabase();
+        try{
+
+            String nombre = datos.getNombre();
+            String  apellido=datos.getApellido();
+            String identificacion=datos.getIdentificacion();
+            String correo=datos.getCorreo();
+            String contrasena=datos.getContra1();
+
+
+            ContentValues registro = new ContentValues();
+            registro.put("nombre", nombre);
+            registro.put("apellido", apellido);
+            registro.put("identificacion", identificacion);
+            registro.put("correo" ,correo);
+            registro.put("contrasena", contrasena);
+
+            int cant = (int) bd.update("usuarios", registro, "identificacion=" + identificacion, null);
+
+            bd.close();
+            if (cant>0) estado = true;
+            else estado = false;
+        }catch (Exception e){
+            estado = false;
+            Log.e("error.", e.toString());
+        }
+        return estado;
+    }
+
 }
