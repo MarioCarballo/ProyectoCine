@@ -17,14 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".splash_activity"></activity>
-        <activity android:name=".Principal" />
+        <activity android:name=".Principal"></activity>
+        <activity android:name=".GuardarEmpleado" />
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
-        <activity android:name=".GuardarEmpleado">
+        <activity android:name=".splash_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
