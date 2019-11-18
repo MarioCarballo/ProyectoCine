@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     private Button btnBuscar, btnActualizar;
-    private EditText et_nombre, et_apellido, et_identificacion, et_email, et_pass, et_pas2;
+    private EditText et_nombre, et_apellido, et_identificacion, et_email, et_pass, ;
 
     boolean estadoNombre = false;
     boolean estadoApellido = false;
