@@ -37,6 +37,7 @@ public class GuardarEmpleado extends AppCompatActivity {
         et_pass = (EditText) findViewById(R.id.et_pass);
 
 
+//btnguardar.setOnClickListener(view);
     }
     public void limpiarDatos(){
         et_email.setText(null);

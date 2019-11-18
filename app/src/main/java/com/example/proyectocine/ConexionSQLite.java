@@ -45,7 +45,8 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         SQLiteDatabase bd = this.getReadableDatabase();
         try {
             String Nombre = datos.getNombre();
-            Cursor fila = bd.rawQuery("select nombre, apellido, identificacion ,correo,contrasena from usuarios where nombre='" + consultaNombre(datos) + "'", null);
+            Cursor fila = bd.rawQuery("select nombre, apellido, identificacion ,correo,contrasena" +
+                    " from usuarios where nombre='" + consultaNombre(datos) + "'", null);
             if (fila.moveToFirst()) {
                 datos.setNombre(fila.getString(0));
                 datos.setApellido(fila.getString(1));

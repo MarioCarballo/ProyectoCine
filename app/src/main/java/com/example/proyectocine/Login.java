@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     private Button btnBuscar, btnActualizar;
-    private EditText et_nombre, et_apellido, et_identificacion, et_email, et_pass, ;
+    private EditText et_nombre, et_apellido, et_identificacion, et_email, et_pass;
 
     boolean estadoNombre = false;
     boolean estadoApellido = false;
@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
         et_identificacion = (EditText) findViewById(R.id.et_identificacion);
         et_email = (EditText) findViewById(R.id.et_email);
         et_pass = (EditText) findViewById(R.id.et_pass);
-        et_pas2 = (EditText) findViewById(R.id.et_pas2);
+
 
 
     }
@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity {
         et_apellido.setText(null);
         et_nombre.setText(null);
         et_pass.setText(null);
-        et_pas2.setText(null);
+
     }
 
     public void consultaNombre(View v) {
@@ -73,11 +73,11 @@ public class Login extends AppCompatActivity {
                et_identificacion.setText(""+datos.getIdentificacion());
               et_email.setText(""+datos.getCorreo());
            }else {
-              Toast.makeText(this,"No existe articulo con dicha descripción",Toast.LENGTH_SHORT).show();
+              Toast.makeText(this,"No existe Usuario con dicha descripción",Toast.LENGTH_SHORT).show();
             limpiarDatos();
            }
         }else {
-        Toast.makeText(this, "Ingrese la descripción del articulo",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Ingrese eol nombre del usuario",Toast.LENGTH_SHORT).show();
         }
 
     }

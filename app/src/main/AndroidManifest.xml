@@ -17,24 +17,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-<<<<<<< HEAD
+
         <activity android:name=".acerca_de"></activity>
-=======
-        <activity android:name=".Principal"></activity>
+
+
         <activity android:name=".splash2_activity" />
         <activity android:name=".GuardarEmpleado" />
->>>>>>> f25fbb33e0e69a41e6f0e5937965ef2944c75672
+        <activity android:name=".Login" />
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Login" />
-<<<<<<< HEAD
-        <activity android:name=".GuardarEmpleado"/>
-        <activity android:name=".Principal">
-=======
+        <activity android:name=".Principal"></activity>
+
+
+
         <activity android:name=".splash_activity">
->>>>>>> f25fbb33e0e69a41e6f0e5937965ef2944c75672
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
