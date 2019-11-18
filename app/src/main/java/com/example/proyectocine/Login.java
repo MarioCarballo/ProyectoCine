@@ -59,18 +59,6 @@ public class Login extends AppCompatActivity {
     }
 
     public void consultaporcodigo(View v) {
-       /* ConexionSQLite admin = new ConexionSQLite(this);
-        SQLiteDatabase bd = admin.getWritableDatabase();
-                                                                                                                                 <<<<<<<<<<
-        String cod = etcodigo.getText().toString();
-        Cursor fila =bd.rawQuery("select descripcion,precio from articulos where codigo=" + cod, null);
-
-        if (fila.moveToFirst()){
-            etarticulo.setText(fila.getString(0));
-            etprecio.setText(fila.getString(1));
-        }else
-            Toast.makeText(this, "No Existe Este Articulo Con Dicho Codigo", Toast.LENGTH_SHORT).show();
-        bd.close();*/
 
         if (et_identificacion.getText().toString().length() == 0) {
             et_identificacion.setError("Campo Obligatorio");
@@ -85,7 +73,7 @@ public class Login extends AppCompatActivity {
             if (conexion.consultacodigo(datos) == true) {
                 et_nombre.setText(datos.getNombre());
                 et_apellido.setText(datos.getApellido());
-                et_identificacion.setText("" + datos.getIdentificacion());
+                et_identificacion.setText(" " + datos.getIdentificacion());
                 et_email.setText(datos.getCorreo());
             } else {
                 Toast.makeText(this, "no existe tal usuario ", Toast.LENGTH_SHORT).show();
@@ -98,23 +86,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void modificar(View view) {
-       /* ConexionSQLite admin = new ConexionSQLite(this);
-        SQLiteDatabase bd =admin.getWritableDatabase();
-        String cod = etcodigo.getText().toString();
-        String descri = etarticulo.getText().toString();
-        String pre = etprecio.getText().toString();
-        ContentValues registro = new ContentValues();
-        registro.put("codigo" , cod);
-        registro.put("descripcion", descri);
-        registro.put("precio" , pre);
-        int cant = bd.update("articulos", registro, "codigo=" + cod,null );
-        bd.close();
-        if (cant == 1) {
-            Toast.makeText(this, "Se Modificaron Los Datos", Toast.LENGTH_SHORT).show();
-        }else {
-            Toast.makeText(this, "No Existe Un Articulo Con El Codigo Ingresado", Toast.LENGTH_SHORT).show();
-        }
-    }*/
+
         if (et_identificacion.getText().toString().length()==0){
             et_identificacion.setError("campo obligatorio");
             inputEI=false;

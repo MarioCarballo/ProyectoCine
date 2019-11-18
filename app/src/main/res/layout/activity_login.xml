@@ -111,7 +111,7 @@
         android:textSize="18dp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:onClick="consultaNombre"
+        android:onClick="consultaporcodigo"
 
         />
 

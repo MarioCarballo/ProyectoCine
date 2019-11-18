@@ -44,14 +44,15 @@ public class ConexionSQLite extends SQLiteOpenHelper {
         int resultado;
         SQLiteDatabase db = this.getWritableDatabase();
         try {
+
             int identificacion = datos.getIdentificacion();
-            Cursor fila = db.rawQuery("select identificacion,nombre, apellido,correo  from usuario where identificacion=" + identificacion, null);
-            if (fila.moveToFirst()) {
+            Cursor fila = db.rawQuery("select  nombre, apellido, identificacion, correo  from usuarios where identificacion=" + identificacion, null);
+                if (fila.moveToFirst()) {
                 datos.setIdentificacion(Integer.parseInt(fila.getString(0)));
                 datos.setNombre(fila.getString(1));
                datos.setApellido(fila.getString(2));
                datos.setCorreo(fila.getString(3));
-
+                estado=true;
             } else {
                 estado = false;
 
